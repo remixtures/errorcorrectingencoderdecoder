@@ -4,11 +4,13 @@ The program reads the text the user wants to send from the send.txt and simulate
 
 For that, the program implements a Hamming code. In this code, every byte contains 4 significant bits, and the other 4 bits are used as an overhead (to be more precise, since the last one just isn't used, only 3 of them are used as an overhead).
 
-If the mode is encode then you need to take the text from send.txt, convert it to ready-to-send form (where you have three significant bits per byte) and save the resulted bytes into the file named encoded.txt.
+MODES:
 
-If the mode is send, you should take the file from encoded.txt and simulate the errors in its bytes (1 bit per byte) and save the resulted bytes into the file named received.txt.
+"encode": text from an input file is converted to a ready-to-send form (where you have three significant bits per byte). The resulting bytes are then saved into a (different) output file.
 
-If the mode is decode, you should take the file from received.txt and decode it to the normal text. Save the text into the file named decoded.txt.
+"send": generates errors in the bytes (1 bit per byte) of a text file and saves the resulting bytes into another file.
+
+"decode": an encoded input file is decoded back into normal text which is then saved to an output file.
 
 Example 1:
 
